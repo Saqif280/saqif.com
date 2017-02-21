@@ -279,7 +279,8 @@ _________________________
                 <label class="uk-form-label">Links</label>
                 <div class="uk-form-controls">
                   <label class="uk-form-label"><a href="resume.pdf" target="_blank">resume</a></label><br>
-                  <label class="uk-form-label"><a href="https://www.linkedin.com/in/saqif" target="_blank">linkedin</a></label>
+                  <label class="uk-form-label"><a href="https://www.linkedin.com/in/saqif" target="_blank">linkedin</a></label><br>
+                  <label class="uk-form-label"><a href="https://github.com/Saqif280" target="_blank">github</a></label>
                 </div>
               </div>
             </div>
