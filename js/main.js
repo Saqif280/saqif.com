@@ -7,28 +7,68 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-63008523-1', 'auto');
 ga('send', 'pageview');
 
-$( document ).ready(function() {
-	// call onepage scroll
+$(document).ready(function() {
+	// ----------------------------------------
+	// EVENT LISTENERS
 	
-	$(".main").onepage_scroll();
+	// $(".portrait").animate({
+	// 	height: "300px"
+	// },1500);
 
-  // ANIMATIONS
-  var arrowAnDelay = 2500;
-  setInterval(function(){
-    $('.title-arrow').removeClass('bounce');
-    //console.log("remove");
-  }, arrowAnDelay);
-	setInterval(function(){
-    setTimeout(function(){
-      $('.title-arrow').addClass('bounce');
-      //console.log("add");
-    }, 100);
-  }, arrowAnDelay);
+	// smooth scroll
+	$(".link_portfolio").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top
+    }, 1000);
+	});
 
-  //move down page on arrow click
-  $(".uk-icon-angle-double-down").click(function(){
-    $(".main").moveDown();
-  });
+	// ----------------------------------------
+	// SIGNITURE SCRIPTS
 
-  //   $(".main").moveDown();
+	// sig svg dimensions
+	var width = 250;
+	var height = width*0.65;
+	var padding = 10;
+
+	// create signiture svg
+	var svg = d3.select("#signiture").append("svg")
+	.attr("height", height)
+	.attr("width", width);
+
+	function plotSigniture(data) {
+		// calculate bounds
+		var xMax = d3.max(data.map(function (d) { return d.x; }));
+		var xMin = d3.min(data.map(function (d) { return d.x; }));
+		var yMax = d3.max(data.map(function (d) { return d.y; }));
+		var yMin = d3.min(data.map(function (d) { return d.y; }));
+
+		// define scales
+		var xScale = d3.scaleLinear().domain([xMin, xMax]).range([padding, width-padding]);
+		var yScale = d3.scaleLinear().domain([yMax, yMin]).range([height-padding, padding]);
+
+		// path function
+		var pathGenerator = d3.line()
+			.curve(d3.curveBasis)
+			.x(function (d) { return xScale(d.x); })
+			.y(function (d) { return yScale(d.y); });
+
+		// create path
+		svg.append("path")
+			.attr("class", "signiture")
+			.attr("d",pathGenerator(data));
+	}
+
+	// parse data
+	function parseLine(row) {
+		row.x = Number(row.x);
+		row.y = Number(row.y);
+		return row;
+	}
+
+	// read in csv
+	d3.csv("data/signiture.txt", parseLine, function (error, data) {
+		setTimeout(function() {
+			plotSigniture(data);
+		}, 600);
+	});
 });
