@@ -59,6 +59,8 @@
 	width: 100%;
 	position: absolute;
 	background-color: #2c3e50;
+  background-image: -webkit-linear-gradient(top, #2980b9, #2c3e50);
+  background-image:         linear-gradient(to bottom, #2980b9, #2c3e50);
 	-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
 	clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
 }
@@ -132,7 +134,7 @@ a.contact_link:hover,a.contact_link:focus{
 path.signiture {
 	/*padding-top: 500px;*/
 	fill: transparent;
-	stroke: #2980b9;
+	stroke: #FFFFFF;
 	stroke-width: 3; 
 	stroke-dasharray: 2000;
 	stroke-dashoffset: 2000;
@@ -150,6 +152,12 @@ path.signiture {
 		stroke-dashoffset: 0;
 		/*fill: #737373;*/
 		fill-opacity: 0.5;
+	}
+}
+/* Small devices (up to 768px) */
+@media (max-width: 768px) {
+	path.signiture {
+		stroke: #2980b9;
 	}
 }
 
@@ -204,6 +212,9 @@ a.pi_link{
 	width: calc(100% - 20px);
 	min-height: 300px;
 }
+/*.portfolio_item:hover a.pi_link{
+	display: block;
+}*/
 .portfolio_item > h4{
 	opacity: 1;
 	text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
