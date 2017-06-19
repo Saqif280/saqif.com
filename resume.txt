@@ -1,0 +1,105 @@
+|************************************************************************|
+------------- [NAME] ----- SAQIF BADRUDDIN -------------------------------
+|************************************************************************|
+
+
+PERSONAL INFO
+
+Phone
+315-744-6373
+E-mail
+ssb229@cornell.edu
+Github
+https://github.com/saqif280
+Website
+http://saqif.com
+LinkedIn
+https://www.linkedin.com/in/saqif/
+
+
+EDUCATION
+
+Aug 2015 - May 2019
+Cornell University
+Bachelor of Science in Information Science
+GPA: 3.77
+
+
+EXPERIENCE
+
+Softare Engineer Intern
+Fidelity Investments, Westlake TX
+May 2017 - August 2017
+Implemented internal tools to assist in asset management. Used C# and
+Angular.js to construct grid based data access layers to asynchronously
+load information to the user to view and manipulate.
+
+Front-end Engineer Intern
+StartupTree, Ithaca NY
+Oct 2015 - Dec 2016
+Designed and implemented event management system for entrepreneurship
+platform. Adapted CSS and JQuery to create custom on-boarding experience
+for new users.
+
+Undergraduate Teaching Assistant
+Cornell University, Ithaca NY
+Aug 2016 - present
+Led weekly review sessions for class of 25 in intermediate level web
+development courses. Taught students how to use PHP in conjunction with
+MySQL database to build robust, data-driven web applications.
+
+Web Development Course Instructor
+Life Changing Summer, Ithaca NY
+Jul 2016 - Aug 2016
+Coordinated and led three-week web development program for high school
+students. Facilitated curriculum built around creating large scale
+personal website project, culminating in final presentation at
+entrepreneurial pitch competition.
+
+Android Development Intern
+Mogee, Syracuse NY
+Jun 2015 - Aug 2015
+Tackled messaging platform bugs and tickets in Java to overhaul user
+experience issues.
+
+
+PROJECTS
+
+DecomprEssay
+decompressay.com
+Web utility that utilizes JavaScript to manipulate bodies of text to
+spoof word counts.
+
+Tablette
+tablette.me
+Constructed customizable browser new tab page which leverages Unsplash
+Photo API to tailor landing page to user preferences.
+
+
+TECHNOLOGIES
+
+• Java
+• C#
+• Python
+• HTML
+• CSS / SASS
+• JavaScript / JQuery
+• Bootstrap / UIKit
+• Angular.js
+• D3.js
+• PHP
+• SQL
+• Git
+• AD Inventor
+
+
+COURSES
+
+• OOP and Data Structures
+• Introductory Python
+• Introductory Web Development
+• Intermediate Web Development
+• Data-driven Web Applications
+• Data Science
+• Networks
+• Designing Technology for Social Impact
