@@ -308,7 +308,7 @@ a.project-card:hover{
 	position: absolute;
 	bottom: 0;
 	background-color: #273444;
-	opacity: 0.05;
+	opacity: 0.03;
 	-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 80%);
 	clip-path: polygon(0 100%, 100% 100%, 100% 80%);
 }
@@ -318,7 +318,7 @@ a.project-card:hover{
 	position: absolute;
 	bottom: 0;
 	background-color: #273444;
-	opacity: 0.05;
+	opacity: 0.03;
 	-webkit-clip-path: polygon(100% 0, 90% 100%, 100% 100%);
 	clip-path: polygon(100% 0, 90% 100%, 100% 100%);
 }
@@ -331,4 +331,11 @@ a.project-card:hover{
 	opacity: 0.9;
 	-webkit-clip-path: polygon(0 0, 0 20%, 100% 0);
 	clip-path: polygon(0 0, 0 20%, 100% 0);
+}
+
+@media screen and (max-width: 768px) {
+  .content{
+  	padding-left: 0;
+  	padding-right: 0;
+  }
 }

@@ -11,12 +11,11 @@ $(document).ready(function() {
 	// ----------------------------------------
 	// EVENT LISTENERS
 
-	// smooth scroll
-	// $(".link_portfolio").click(function() {
- //    $('html, body').animate({
- //        scrollTop: $("#portfolio").offset().top
- //    }, 1000);
-	// });
+
+
+
+
+
 
 	// ----------------------------------------
 	// SIGNITURE SCRIPTS
@@ -68,3 +67,11 @@ $(document).ready(function() {
 		}, 0);
 	});
 });
+
+
+// when mouse moves
+$(window).scroll(function(element){
+	var height = $(".section-hero").height();
+	var factor = height-(height-document.documentElement.scrollTop)
+	$(".first-name").css("margin-top",factor/2);
+})
