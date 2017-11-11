@@ -10,23 +10,19 @@ ga('send', 'pageview');
 $(document).ready(function() {
 	// ----------------------------------------
 	// EVENT LISTENERS
-	
-	// $(".portrait").animate({
-	// 	height: "300px"
-	// },1500);
 
 	// smooth scroll
-	$(".link_portfolio").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#portfolio").offset().top
-    }, 1000);
-	});
+	// $(".link_portfolio").click(function() {
+ //    $('html, body').animate({
+ //        scrollTop: $("#portfolio").offset().top
+ //    }, 1000);
+	// });
 
 	// ----------------------------------------
 	// SIGNITURE SCRIPTS
 
 	// sig svg dimensions
-	var width = 250;
+	var width = 350;
 	var height = width*0.65;
 	var padding = 10;
 
@@ -69,6 +65,6 @@ $(document).ready(function() {
 	d3.csv("data/signiture.txt", parseLine, function (error, data) {
 		setTimeout(function() {
 			plotSigniture(data);
-		}, 600);
+		}, 0);
 	});
 });
