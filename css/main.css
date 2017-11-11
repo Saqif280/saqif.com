@@ -251,7 +251,16 @@ a.project-card:hover{
 	border-bottom-right-radius: 0;
 	width: 100%;
 	height: 300px;
-	/*background: url(../img/keyboard.jpg) no-repeat center center;*/
+}
+.sparkresume-img{
+	background: url(../img/sparkresume_thumb.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.decompressay-img{
+	background: url(../img/decompressay_thumb.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
