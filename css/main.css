@@ -51,10 +51,14 @@ p{
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-size: 1rem;
 	color: #10131a;
-	opacity: 0.5;
+	opacity: 0.3;
 	letter-spacing: 0px;
 	font-weight: 300px;
 	line-height: 25px; 
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 .accent-text{
 	color: #FF5216;
@@ -65,8 +69,8 @@ p{
   align-items: center;
 }
 .padding-0{
-    padding-right:0;
-    padding-left:0;
+  padding-right:0;
+  padding-left:0;
   margin-left: 0;
   margin-right: 0;
 }
@@ -108,7 +112,7 @@ p{
 }
 .section-hero h1{
 	color: #fff;
-	opacity: .5;
+	opacity: .3;
 }
 .section-hero h3{
 	color: #ddd;
@@ -148,7 +152,20 @@ path.signiture {
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 30px;
+	padding: 40px;
+	padding-top: 80px;
+}
+.content-chunk{
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px;
+	text-align: center;
+}
+.content-chunk h2{
+	opacity: .3;
+	/*text-transform: uppercase;*/
+	line-height: 40px;
 }
 a.project-card{
 	/*border: 1px solid rgba(0,0,0,0.2);*/
@@ -179,3 +196,12 @@ a.project-card:hover{
 .project-card_content{
 	padding: 40px;
 }
+
+/* project styles */
+.section-footer{
+	background-color: #F9FAFC;
+}
+.social-links{
+	letter-spacing: 10px;
+}
+
