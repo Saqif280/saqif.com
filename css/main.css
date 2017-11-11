@@ -26,6 +26,8 @@ h1{
 	letter-spacing: 4px;
 	text-transform: uppercase;
 	margin: 0;
+	color: #fff;
+	opacity: .3;
 }
 h2{
 	font-size: 1.5rem;
@@ -39,6 +41,7 @@ h3{
 	font-weight: 200;
 	letter-spacing: 4px;
 	text-transform: uppercase;
+	color: #ddd;
 }
 h4{
 	font-size: 0.8rem;
@@ -60,6 +63,74 @@ a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
+
+/* animations */
+.animate-opacity-fade-03 {
+  -webkit-animation: opacity-fade-03 1s ease-in-out 1 normal;
+  -moz-animation: opacity-fade-03 1s ease-in-out 1 normal;
+  -o-animation: opacity-fade-03 1s ease-in-out 1 normal;
+  animation: opacity-fade-03 1s ease-in-out 1 normal; 
+}
+@keyframes opacity-fade-03 {
+  0% {
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 0.3;
+  } 
+}
+.animate-opacity-fade-1 {
+  -webkit-animation: opacity-fade-1 2s ease-in-out 1 normal;
+  -moz-animation: opacity-fade-1 2s ease-in-out 1 normal;
+  -o-animation: opacity-fade-1 2s ease-in-out 1 normal;
+  animation: opacity-fade-1 2s ease-in-out 1 normal; 
+}
+@keyframes opacity-fade-1 {
+  0% {
+  	opacity: 0;
+  }
+  30%{
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 1.0;
+  } 
+}
+
+/*.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1100 { animation-delay: 1100ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1300 { animation-delay: 1300ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-1600 { animation-delay: 1600ms; }
+.delay-1700 { animation-delay: 1700ms; }
+.delay-1800 { animation-delay: 1800ms; }
+.delay-1900 { animation-delay: 1900ms; }
+.delay-2000 { animation-delay: 2000ms; }
+
+.delay-2100 { animation-delay: 2100ms; }
+.delay-2200 { animation-delay: 2200ms; }
+.delay-2300 { animation-delay: 2300ms; }
+.delay-2400 { animation-delay: 2400ms; }
+.delay-2500 { animation-delay: 2500ms; }
+.delay-2600 { animation-delay: 2600ms; }
+.delay-2700 { animation-delay: 2700ms; }
+.delay-2800 { animation-delay: 2800ms; }
+.delay-2900 { animation-delay: 2900ms; }
+.delay-3000 { animation-delay: 3000ms; }*/
+
+/* helpers */
 .accent-text{
 	color: #FF5216;
 }
@@ -109,13 +180,6 @@ a {
 }
 .section-hero .content-wrapper{
 	width: 100%;
-}
-.section-hero h1{
-	color: #fff;
-	opacity: .3;
-}
-.section-hero h3{
-	color: #ddd;
 }
 /* SIGNITURE */
 .signiture{
