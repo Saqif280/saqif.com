@@ -69,9 +69,9 @@ $(document).ready(function() {
 });
 
 
-// when mouse moves
-$(window).scroll(function(element){
-	var height = $(".section-hero").height();
-	var factor = height-(height-document.documentElement.scrollTop)
-	$(".first-name").css("margin-top",factor/2);
-})
+// // when scroll
+// $(window).scroll(function(element){
+// 	var height = $(".section-hero").height();
+// 	var factor = height-(height-document.documentElement.scrollTop)
+// 	$(".first-name").css("margin-top",factor/2);
+// })
