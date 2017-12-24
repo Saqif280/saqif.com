@@ -245,7 +245,7 @@ a {
 .section-hero .portrait{
 	width: 100%;
 	height: 100vh;
-	background: url(../img/portrait_cutout-min.png) no-repeat center center;
+	background: url(../img/portrait_cutout.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
