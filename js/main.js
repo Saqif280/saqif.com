@@ -11,10 +11,77 @@ $(document).ready(function() {
 	// ----------------------------------------
 	// EVENT LISTENERS
 
+  // preloader
+	// https://ihatetomatoes.net/a-simple-one-page-template-with-a-preloading-screen/
 
+	// number of loaded images for preloader progress
+	var loadedCount = 0; // current number of images loaded
+	var imagesToLoad = 1; // number of images to load
+	var loadingProgress = 0; // timeline progress - starts at 0
+	 
+	$('.portrait').imagesLoaded({
+	    background: true
+	}).progress( function( instance, image ) {
+	    loadProgress();
+	});
+	 
+	function loadProgress(imgLoad, image)
+	{
+	    //one more image has been loaded
+	    loadedCount++;
+	 
+	    loadingProgress = (loadedCount/imagesToLoad);
+	 
+	    // GSAP tween of our progress bar timeline
+	    TweenLite.to(progressTl, 0.7, {progress:loadingProgress, ease:Linear.easeNone});
+	 
+	}
 
+	//progress timeline
+	var progressTl = new TimelineMax({
+	    paused: true,
+	    onUpdate: progressUpdate,
+	    onComplete: loadComplete
+	});
+	 
+	progressTl
+	    //tween the progress bar width
+	    .to($('.preloader-progress span'), 1, {width:100, ease:Linear.easeNone});
+	 
+	//as the progress bar width updates and grows we put the percentage loaded in the screen
+	function progressUpdate()
+	{
+	    //the percentage loaded based on the tween's progress
+	    loadingProgress = Math.round(progressTl.progress() * 100);
+	 
+	    //we put the percentage in the screen
+	    $(".preloader-percentage").text(loadingProgress + '%');
+	 
+	}
 
+	function loadComplete() {
+ 
+    // preloader out
+    var preloaderOutTl = new TimelineMax();
+ 
+    preloaderOutTl
+        .to($('.preloader-progress'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn})
+        .to($('.preloader-percentage'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn}, 0.1)
+        .set($('body'), {className: '-=is-loading'})
+        .set($('.section-hero'), {className: '+=is-loaded'})
+        .to($('#preloader'), 0.7, {yPercent: 100, ease:Power4.easeInOut})
+        .set($('#preloader'), {className: '+=is-hidden'})
+        .from($('.section-hero'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.2');
 
+		// read in csv
+		d3.csv("data/signiture.txt", parseLine, function (error, data) {
+			setTimeout(function() {
+				plotSigniture(data);
+			}, 1000);
+		});
+ 
+    return preloaderOutTl;
+	}
 
 
 	// ----------------------------------------
@@ -60,12 +127,8 @@ $(document).ready(function() {
 		return row;
 	}
 
-	// read in csv
-	d3.csv("data/signiture.txt", parseLine, function (error, data) {
-		setTimeout(function() {
-			plotSigniture(data);
-		}, 0);
-	});
+
+
 });
 
 

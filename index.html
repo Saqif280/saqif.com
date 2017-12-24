@@ -40,7 +40,18 @@
 <link href="css/main.css?v1" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/main.js?v2" ></script>
 </head>
-<body>
+<body class="is-loading">
+
+	<!-- preloader -->
+	<div id="preloader">
+    <div class="preloader-text">
+        <p class="preloader-percentage">0%</p>
+        <div class="preloader-progress">
+        	<span></span>
+        </div>
+    </div>
+	</div>
+
 	<!-- section hero -->
 	<div class="section-hero">
 		<div class="portrait center-flex">
@@ -126,6 +137,10 @@
 
 	<div class="bg-poly3">
 	</div> -->
+
+	<!-- preloader scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
 
 </body>
 </html>
