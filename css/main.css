@@ -232,15 +232,6 @@ a {
 	background: -ms-radial-gradient(center, ellipse cover, rgba(16,19,26,1) 0%, rgba(0,0,0,1) 100%);
 	background: radial-gradient(ellipse at center, rgba(16,19,26,1) 0%, rgba(0,0,0,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10131a', endColorstr='#000000', GradientType=1 );
-	/* blue */
-	/*	background: rgba(19,24,35,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(19,24,35,1) 0%, rgba(0,0,0,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(19,24,35,1)), color-stop(100%, rgba(0,0,0,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(19,24,35,1) 0%, rgba(0,0,0,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(19,24,35,1) 0%, rgba(0,0,0,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(19,24,35,1) 0%, rgba(0,0,0,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(19,24,35,1) 0%, rgba(0,0,0,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131823', endColorstr='#000000', GradientType=1 );*/
 }
 .section-hero .portrait{
 	width: 100%;
@@ -283,24 +274,6 @@ path.signiture {
 
 .bg-wrapper{
 	background-color: #F9FAFC;
-	/*
-	background: rgba(255,255,255,1);
-	background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(239,242,247,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(239,242,247,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(239,242,247,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(239,242,247,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(239,242,247,1) 100%);
-	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(239,242,247,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eff2f7', GradientType=1 );*/
-
-	/*background: rgba(255,255,255,1);
-	background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(229,233,242,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(229,233,242,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(229,233,242,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(229,233,242,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(229,233,242,1) 100%);
-	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(229,233,242,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e9f2', GradientType=1 );*/
 }
 
 /* project styles */
@@ -367,6 +340,22 @@ a.project-card:hover{
 .project-card_content{
 	padding: 40px;
 }
+.overlay{
+	margin: 30px;
+	width: calc(100% - 60px);
+	height: calc(100% - 60px);
+	border-radius: 5px;
+	position: absolute;
+	z-index: 10;
+	background-color: #fff;
+	opacity: 0.9;
+	text-align: center;
+}
+.overlay h3{
+	color: #000;
+	font-weight: 700;
+	opacity: 0.9;
+}
 
 /* project styles */
 .section-footer{
@@ -375,6 +364,10 @@ a.project-card:hover{
 .social-links{
 	letter-spacing: 10px;
 }
+
+
+
+
 
 .bg-poly1{
 	height: 400px;
