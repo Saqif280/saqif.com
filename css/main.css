@@ -141,12 +141,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-.padding-0{
-  padding-right:0;
-  padding-left:0;
-  margin-left: 0;
-  margin-right: 0;
-}
 
 /* preloader styles */
 #preloader {
@@ -308,10 +302,16 @@ a.project-card{
 	margin: 30px;
 	box-shadow: 0 0 30px 0 rgba(229,232,235,0.3), 0 0 0 transparent;
 	transition: 300ms all;
+	margin: 0;
+	margin-bottom: 30px;
 }
 a.project-card:hover{
 	transform: translateY(-10px);
 	box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+}
+.padding-0{
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .project-card_thumb{
 	border-radius: 5px;
@@ -331,7 +331,14 @@ a.project-card:hover{
   background-size: cover;
 }
 .decompressay-img{
-	background: url(../img/decompressay_thumb.png) no-repeat center center;
+	background: url(../img/decompressay_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.phonology-img{
+	background: url(../img/phonology_thumb-min.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -341,9 +348,9 @@ a.project-card:hover{
 	padding: 40px;
 }
 .overlay{
-	margin: 30px;
-	width: calc(100% - 60px);
-	height: calc(100% - 60px);
+	/*margin: 30px;*/
+	width: calc(100% - 20px);
+	height: calc(100% - 0px);
 	border-radius: 5px;
 	position: absolute;
 	z-index: 10;
