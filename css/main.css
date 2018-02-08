@@ -59,7 +59,7 @@ p{
 	opacity: 0.3;
 	letter-spacing: 0px;
 	font-weight: 300px;
-	line-height: 25px; 
+	line-height: 25px;
 }
 a {
   color: inherit; /* blue colors for links too */
@@ -71,7 +71,7 @@ a {
   -webkit-animation: opacity-fade-03 1s ease-in-out 1 normal;
   -moz-animation: opacity-fade-03 1s ease-in-out 1 normal;
   -o-animation: opacity-fade-03 1s ease-in-out 1 normal;
-  animation: opacity-fade-03 1s ease-in-out 1 normal; 
+  animation: opacity-fade-03 1s ease-in-out 1 normal;
 }
 @keyframes opacity-fade-03 {
   0% {
@@ -79,13 +79,13 @@ a {
   }
   100% {
   	opacity: 0.3;
-  } 
+  }
 }
 .animate-opacity-fade-1 {
   -webkit-animation: opacity-fade-1 2s ease-in-out 1 normal;
   -moz-animation: opacity-fade-1 2s ease-in-out 1 normal;
   -o-animation: opacity-fade-1 2s ease-in-out 1 normal;
-  animation: opacity-fade-1 2s ease-in-out 1 normal; 
+  animation: opacity-fade-1 2s ease-in-out 1 normal;
 }
 @keyframes opacity-fade-1 {
   0% {
@@ -96,7 +96,7 @@ a {
   }
   100% {
   	opacity: 1.0;
-  } 
+  }
 }
 
 /*.delay-100 { animation-delay: 100ms; }
@@ -246,7 +246,7 @@ path.signiture {
 	/*padding-top: 500px;*/
 	fill: transparent;
 	stroke: #FF5216;
-	stroke-width: 2; 
+	stroke-width: 2;
 	stroke-dasharray: 2000;
 	stroke-dashoffset: 2000;
 	animation: draw 2s ease-in-out forwards;
@@ -331,14 +331,21 @@ a.project-card:hover{
   background-size: cover;
 }
 .decompressay-img{
-	background: url(../img/decompressay_thumb-min.png) no-repeat center center;
+	background: #EFF2F7 url(../img/decompressay_thumb-min.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .phonology-img{
-	background: url(../img/phonology_thumb-min.png) no-repeat center center;
+	background: #EFF2F7 url(../img/phonology_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.spoilerblock-img{
+	background: #EFF2F7 url(../img/spoilerblock_thumb-min.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
