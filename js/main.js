@@ -11,6 +11,18 @@ $(document).ready(function() {
 	// ----------------------------------------
 	// EVENT LISTENERS
 
+	// slide to id
+	$("a[href^='#']").click(function(e) {
+		e.preventDefault();
+
+		var position = $($(this).attr("href")).offset().top;
+
+		$("body, html").animate({
+			scrollTop: position
+		}, 1000);
+	});
+
+
   // preloader
 	// https://ihatetomatoes.net/a-simple-one-page-template-with-a-preloading-screen/
 
@@ -71,13 +83,17 @@ $(document).ready(function() {
         .set($('.section-hero'), {className: '+=is-loaded'})
         .to($('#preloader'), 0.7, {yPercent: 100, ease:Power4.easeInOut})
         .set($('#preloader'), {className: '+=is-hidden'})
-        .from($('.section-hero'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.2');
+				.from($('.section-hero'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.2')
+				.from($('.title'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.8')
+				.from($('.bio'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
+				.from($('.topnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
+        .from($('.leftnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5');
 
 		// read in csv
 		d3.csv("data/signiture.txt", parseLine, function (error, data) {
 			setTimeout(function() {
 				plotSigniture(data);
-			}, 1000);
+			}, 1500);
 		});
 
     return preloaderOutTl;
@@ -134,9 +150,14 @@ $(document).ready(function() {
 
 // when scroll
 $(window).scroll(function(element){
+	var scrollTop = $(window).scrollTop();
+  var projectOffset = $('.bg-wrapper').offset().top;
+  var distanceProj = (projectOffset - scrollTop);
+	var wHeight = $(window).height();
 	var height = $(".section-hero").height();
-	var factor = height-(height-document.documentElement.scrollTop)
+	var factor = height-(height-scrollTop)
 	$(".first-name").css("margin-top",factor/2);
-	$(".intro, .signiture").css("opacity",(height-2*document.documentElement.scrollTop)/(height));
-	// $(".bg-wrapper").css("opacity",(10*document.documentElement.scrollTop-height)/(height*2));
+	$(".intro, .signiture").css("opacity",(height-2*scrollTop)/(height));
+	// $(".section-hero").css("height", wHeight-scrollTop/2);
+	// $(".bg-wrapper").css("padding-top", wHeight/4);
 })

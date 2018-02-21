@@ -45,6 +45,8 @@
 	<!-- preloader -->
 	<div id="preloader">
     <div class="preloader-text">
+				<h3 class="loading"></h3>
+				<br>
         <p class="preloader-percentage">0%</p>
         <br>
         <div class="preloader-progress">
@@ -53,18 +55,41 @@
     </div>
 	</div>
 
+	<div class="section-topnav">
+		<div class="container-fluid">
+			<div class="col-md-offset-1 col-md-11">
+				<ul class="topnav">
+					<li><a href="#about" class="active">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-leftnav center-flex">
+		<ul class="leftnav">
+			<li><a href="mailto:ssb229@cornell.edu"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="resume.pdf" target="_blank"><i class="fa fa-file-text"></i></a></li>
+			<li><a href="https://github.com/Saqif280" target="_blank"><i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/saqif/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<!-- <li><a href="https://www.facebook.com/profile.php?id=100000609492596" target="_blank"><i class="fa fa-facebook"></i></a></li> -->
+		</ul>
+	</div>
+
 	<!-- section hero -->
 	<div class="section-hero">
 		<div class="portrait center-flex">
-			<div class="content-wrapper container-fluid">
-				<div class="col-md-offset-1 col-md-5 intro">
-					<h1 class="first-name animate-opacity-fade-03">Saqif</h1>
-					<h1 class="last-name animate-opacity-fade-03">Badruddin</h1>
-					<h3 class="title animate-opacity-fade-1">Developer // <span class="accent-text">Designer</span></h3>
+			<div class="content-wrapper container-fluid sidenav-adj">
+				<div class="col-sm-offset-1 col-sm-5 intro">
+					<h1 class="first-name">Saqif</h1>
+					<h1 class="last-name">Badruddin</h1>
+					<h3 class="title">Developer // <span class="accent-text">Designer</span></h3>
+					<p class="bio"><span>I design and create internet applications. Email me at </span><a href="mailto:ssb229@cornell.edu">ssb229@cornell.edu</a><span>. For more information, see my </span><a href="resume.pdf" target="_blank">resume.</a></p>
 				</div>
-				<div class="col-md-2">
+				<div class="col-sm-2">
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 hidden-sm hidden-xs">
 		    	<div class="signiture" id="signiture"></div>
 				</div>
 			</div>
@@ -72,7 +97,7 @@
 	</div>
 
 	<!-- projects -->
-	<div class="bg-wrapper">
+	<div class="bg-wrapper" id="portfolio">
 		<div class="section-projects">
 			<div class="content">
 				<div class="content-chunk">
@@ -143,7 +168,7 @@
 		</div>
 
 		<!-- footer -->
-		<div class="section-footer">
+		<div class="section-footer" id="contact">
 			<div class="content">
 				<div class="content-chunk">
 					<h2>Let's get in touch&nbsp;&nbsp;</h2>
