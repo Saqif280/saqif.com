@@ -309,6 +309,34 @@ a.project-card:hover{
 	transform: translateY(-10px);
 	box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
 }
+a.project-card:hover .sparkresume-img{
+	background: #FFD55F url(../img/sparkresume_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a.project-card:hover .decompressay-img{
+	background: #85D7FF url(../img/decompressay_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a.project-card:hover .phonology-img{
+	background: #FF9E7C url(../img/phonology_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a.project-card:hover .spoilerblock-img{
+	background: #A389F4 url(../img/spoilerblock_thumb-min.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .padding-0{
 	padding-left: 10px;
 	padding-right: 10px;
@@ -329,6 +357,7 @@ a.project-card:hover{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: 500ms all;
 }
 .decompressay-img{
 	background: #EFF2F7 url(../img/decompressay_thumb-min.png) no-repeat center center;
@@ -336,6 +365,7 @@ a.project-card:hover{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: 500ms all;
 }
 .phonology-img{
 	background: #EFF2F7 url(../img/phonology_thumb-min.png) no-repeat center center;
@@ -343,6 +373,7 @@ a.project-card:hover{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: 500ms all;
 }
 .spoilerblock-img{
 	background: #EFF2F7 url(../img/spoilerblock_thumb-min.png) no-repeat center center;
@@ -350,6 +381,7 @@ a.project-card:hover{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: 500ms all;
 }
 .project-card_content{
 	padding: 40px;

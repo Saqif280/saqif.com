@@ -18,23 +18,23 @@ $(document).ready(function() {
 	var loadedCount = 0; // current number of images loaded
 	var imagesToLoad = 1; // number of images to load
 	var loadingProgress = 0; // timeline progress - starts at 0
-	 
+
 	$('.portrait').imagesLoaded({
 	    background: true
 	}).progress( function( instance, image ) {
 	    loadProgress();
 	});
-	 
+
 	function loadProgress(imgLoad, image)
 	{
 	    //one more image has been loaded
 	    loadedCount++;
-	 
+
 	    loadingProgress = (loadedCount/imagesToLoad);
-	 
+
 	    // GSAP tween of our progress bar timeline
 	    TweenLite.to(progressTl, 0.7, {progress:loadingProgress, ease:Linear.easeNone});
-	 
+
 	}
 
 	//progress timeline
@@ -43,27 +43,27 @@ $(document).ready(function() {
 	    onUpdate: progressUpdate,
 	    onComplete: loadComplete
 	});
-	 
+
 	progressTl
 	    //tween the progress bar width
 	    .to($('.preloader-progress span'), 1, {width:100, ease:Linear.easeNone});
-	 
+
 	//as the progress bar width updates and grows we put the percentage loaded in the screen
 	function progressUpdate()
 	{
 	    //the percentage loaded based on the tween's progress
 	    loadingProgress = Math.round(progressTl.progress() * 100);
-	 
+
 	    //we put the percentage in the screen
 	    $(".preloader-percentage").text(loadingProgress + '%');
-	 
+
 	}
 
 	function loadComplete() {
- 
+
     // preloader out
     var preloaderOutTl = new TimelineMax();
- 
+
     preloaderOutTl
         .to($('.preloader-progress'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn})
         .to($('.preloader-percentage'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn}, 0.1)
@@ -79,7 +79,7 @@ $(document).ready(function() {
 				plotSigniture(data);
 			}, 1000);
 		});
- 
+
     return preloaderOutTl;
 	}
 
@@ -132,9 +132,11 @@ $(document).ready(function() {
 });
 
 
-// // when scroll
-// $(window).scroll(function(element){
-// 	var height = $(".section-hero").height();
-// 	var factor = height-(height-document.documentElement.scrollTop)
-// 	$(".first-name").css("margin-top",factor/2);
-// })
+// when scroll
+$(window).scroll(function(element){
+	var height = $(".section-hero").height();
+	var factor = height-(height-document.documentElement.scrollTop)
+	$(".first-name").css("margin-top",factor/2);
+	$(".intro, .signiture").css("opacity",(height-2*document.documentElement.scrollTop)/(height));
+	// $(".bg-wrapper").css("opacity",(10*document.documentElement.scrollTop-height)/(height*2));
+})
