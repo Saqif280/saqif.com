@@ -14,8 +14,11 @@ $(document).ready(function() {
 	// slide to id
 	$("a[href^='#']").click(function(e) {
 		e.preventDefault();
-
 		var position = $($(this).attr("href")).offset().top;
+
+		// add/remove active class
+		$('a[href="'+$(this).attr("href")+'"]').addClass('active');
+		$('a[href!="'+$(this).attr("href")+'"]').removeClass('active');
 
 		$("body, html").animate({
 			scrollTop: position
@@ -150,6 +153,7 @@ $(document).ready(function() {
 
 // when scroll
 $(window).scroll(function(element){
+	// parallax hero
 	var scrollTop = $(window).scrollTop();
   var projectOffset = $('.bg-wrapper').offset().top;
   var distanceProj = (projectOffset - scrollTop);
@@ -160,4 +164,35 @@ $(window).scroll(function(element){
 	$(".intro, .signiture").css("opacity",(height-2*scrollTop)/(height));
 	// $(".section-hero").css("height", wHeight-scrollTop/2);
 	// $(".bg-wrapper").css("padding-top", wHeight/4);
+
+	// update active links TODO
+	if(isScrolledIntoView(document.getElementById('about'))){
+		$('a[href="#about"]').addClass('active');
+		$('a[href!="#about"]').removeClass('active');
+		console.log("about");
+	}
+	if(isScrolledIntoView(document.getElementById('portfolio'))){
+		$('a[href="#portfolio"]').addClass('active');
+		$('a[href!="#portfolio"]').removeClass('active');
+		console.log("portfolio");
+	}
+	if(isScrolledIntoView(document.getElementById('contact'))){
+		$('a[href="#contact"]').addClass('active');
+		$('a[href!="#contact"]').removeClass('active');
+		console.log("contact");
+	}
+
+	// scrollfire TODO
 })
+
+function isScrolledIntoView(el) {
+  var rect = el.getBoundingClientRect();
+  var elemTop = rect.top;
+  var elemBottom = rect.bottom;
+
+  // Only completely visible elements return true:
+  // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  // Partially visible elements return true:
+  var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
+}
