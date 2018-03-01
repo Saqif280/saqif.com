@@ -162,6 +162,8 @@ $(window).scroll(function(element){
 	var factor = height-(height-scrollTop)
 	$(".first-name").css("margin-top",factor/2);
 	$(".intro, .signiture").css("opacity",(height-2*scrollTop)/(height));
+	$(".section-leftnav2").css("opacity",5*(1.2*scrollTop-height)/(height));
+	console.log((2*scrollTop-height)/(height));
 	// $(".section-hero").css("height", wHeight-scrollTop/2);
 	// $(".bg-wrapper").css("padding-top", wHeight/4);
 
@@ -169,17 +171,14 @@ $(window).scroll(function(element){
 	if(isScrolledIntoView(document.getElementById('about'))){
 		$('a[href="#about"]').addClass('active');
 		$('a[href!="#about"]').removeClass('active');
-		console.log("about");
 	}
 	if(isScrolledIntoView(document.getElementById('portfolio'))){
 		$('a[href="#portfolio"]').addClass('active');
 		$('a[href!="#portfolio"]').removeClass('active');
-		console.log("portfolio");
 	}
 	if(isScrolledIntoView(document.getElementById('contact'))){
 		$('a[href="#contact"]').addClass('active');
 		$('a[href!="#contact"]').removeClass('active');
-		console.log("contact");
 	}
 
 	// scrollfire TODO
