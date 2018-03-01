@@ -349,16 +349,6 @@ ul{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* hero styles */
 .section-hero{
 	width: 100%;
@@ -464,6 +454,10 @@ path.signiture {
 	opacity: .3;
 	/*text-transform: uppercase;*/
 	line-height: 40px;
+}
+#pc-decompressay,#pc-phonology,#pc-spoilerblock,#pc-sparkresume{
+  opacity: 0;
+  transition: 500ms all;
 }
 a.project-card{
 	/*border: 1px solid rgba(0,0,0,0.2);*/

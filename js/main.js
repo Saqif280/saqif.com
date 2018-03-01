@@ -163,11 +163,10 @@ $(window).scroll(function(element){
 	$(".first-name").css("margin-top",factor/2);
 	$(".intro, .signiture").css("opacity",(height-2*scrollTop)/(height));
 	$(".section-leftnav2").css("opacity",5*(1.2*scrollTop-height)/(height));
-	console.log((2*scrollTop-height)/(height));
 	// $(".section-hero").css("height", wHeight-scrollTop/2);
 	// $(".bg-wrapper").css("padding-top", wHeight/4);
 
-	// update active links TODO
+	// update active links
 	if(isScrolledIntoView(document.getElementById('about'))){
 		$('a[href="#about"]').addClass('active');
 		$('a[href!="#about"]').removeClass('active');
@@ -181,7 +180,27 @@ $(window).scroll(function(element){
 		$('a[href!="#contact"]').removeClass('active');
 	}
 
-	// scrollfire TODO
+	// scrollfire
+	if(isScrolledIntoView(document.getElementById('pc-decompressay'))){
+		setTimeout(function(){
+			$('#pc-decompressay').css("opacity",1);
+		},300);
+	}
+	if(isScrolledIntoView(document.getElementById('pc-phonology'))){
+		setTimeout(function(){
+			$('#pc-phonology').css("opacity",1);
+		},300);
+	}
+	if(isScrolledIntoView(document.getElementById('pc-spoilerblock'))){
+		setTimeout(function(){
+			$('#pc-spoilerblock').css("opacity",1);
+		},300);
+	}
+	if(isScrolledIntoView(document.getElementById('pc-sparkresume'))){
+		setTimeout(function(){
+			$('#pc-sparkresume').css("opacity",1);
+		},300);
+	}
 })
 
 function isScrolledIntoView(el) {
