@@ -184,22 +184,22 @@ $(window).scroll(function(element){
 	if(isScrolledIntoView(document.getElementById('pc-decompressay'))){
 		setTimeout(function(){
 			$('#pc-decompressay').css("opacity",1);
-		},300);
+		},0);
 	}
 	if(isScrolledIntoView(document.getElementById('pc-phonology'))){
 		setTimeout(function(){
 			$('#pc-phonology').css("opacity",1);
-		},300);
+		},0);
 	}
 	if(isScrolledIntoView(document.getElementById('pc-spoilerblock'))){
 		setTimeout(function(){
 			$('#pc-spoilerblock').css("opacity",1);
-		},300);
+		},0);
 	}
 	if(isScrolledIntoView(document.getElementById('pc-sparkresume'))){
 		setTimeout(function(){
 			$('#pc-sparkresume').css("opacity",1);
-		},300);
+		},0);
 	}
 })
 
