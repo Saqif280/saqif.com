@@ -202,6 +202,11 @@ $(window).scroll(function(element){
 	}
 
 	// scrollfire section colors
+	if(isScrolledIntoView(document.getElementById('about'))){
+		setTimeout(function(){
+			// nothing
+		},0);
+	}
 	if(isScrolledIntoView(document.getElementById('portfolio'))){
 		setTimeout(function(){
 			$('.section-projects').css('background-color','#F9FAFC');
@@ -214,6 +219,10 @@ $(window).scroll(function(element){
 			$('.section-projects').css('background-color','#009EEB');
 			$('.section-footer').css('background-color','#009EEB');
 			$('.leftnav2 li a').css('color','#fff');
+			$('#pc-decompressay').css("opacity",0);
+			$('#pc-phonology').css("opacity",0);
+			$('#pc-spoilerblock').css("opacity",0);
+			$('#pc-sparkresume').css("opacity",0);
 		},0);
 	}
 
