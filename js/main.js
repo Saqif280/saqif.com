@@ -155,7 +155,8 @@ $(document).ready(function() {
 $(window).scroll(function(element){
 	// parallax hero
 	var scrollTop = $(window).scrollTop();
-  var projectOffset = $('.bg-wrapper').offset().top;
+  var projectOffset = $('.section-projects').offset().top;
+  var footerOffset = $('.section-footer').offset().top;
   var distanceProj = (projectOffset - scrollTop);
 	var wHeight = $(window).height();
 	var height = $(".section-hero").height();
@@ -163,8 +164,6 @@ $(window).scroll(function(element){
 	$(".first-name").css("margin-top",factor/2);
 	$(".intro, .signiture").css("opacity",(height-2*scrollTop)/(height));
 	$(".section-leftnav2").css("opacity",5*(1.2*scrollTop-height)/(height));
-	// $(".section-hero").css("height", wHeight-scrollTop/2);
-	// $(".bg-wrapper").css("padding-top", wHeight/4);
 
 	// update active links
 	if(isScrolledIntoView(document.getElementById('about'))){
@@ -180,7 +179,7 @@ $(window).scroll(function(element){
 		$('a[href!="#contact"]').removeClass('active');
 	}
 
-	// scrollfire
+	// scrollfire for projects
 	if(isScrolledIntoView(document.getElementById('pc-decompressay'))){
 		setTimeout(function(){
 			$('#pc-decompressay').css("opacity",1);
@@ -201,6 +200,23 @@ $(window).scroll(function(element){
 			$('#pc-sparkresume').css("opacity",1);
 		},0);
 	}
+
+	// scrollfire section colors
+	if(isScrolledIntoView(document.getElementById('portfolio'))){
+		setTimeout(function(){
+			$('.section-projects').css('background-color','#F9FAFC');
+			$('.section-footer').css('background-color','#F9FAFC');
+			$('.leftnav2 li a').css('color','#000');
+		},0);
+	}
+	if(isScrolledIntoView(document.getElementById('contact'))){
+		setTimeout(function(){
+			$('.section-projects').css('background-color','#009EEB');
+			$('.section-footer').css('background-color','#009EEB');
+			$('.leftnav2 li a').css('color','#fff');
+		},0);
+	}
+
 })
 
 function isScrolledIntoView(el) {
