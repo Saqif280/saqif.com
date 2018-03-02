@@ -216,6 +216,20 @@ a {
   visibility: hidden;
 }
 
+/* .icon{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: url('../img/icon.png') no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+} */
+
 /* navbar styles */
 ul{
   list-style-type: none;
