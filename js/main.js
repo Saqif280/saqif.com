@@ -195,11 +195,16 @@ $(window).scroll(function(element){
 			$('#pc-spoilerblock').css("opacity",1);
 		},0);
 	}
-	if(isScrolledIntoView(document.getElementById('pc-sparkresume'))){
+	if(isScrolledIntoView(document.getElementById('pc-mosquebuddy'))){
 		setTimeout(function(){
-			$('#pc-sparkresume').css("opacity",1);
+			$('#pc-mosquebuddy').css("opacity",1);
 		},0);
 	}
+	// if(isScrolledIntoView(document.getElementById('pc-sparkresume'))){
+	// 	setTimeout(function(){
+	// 		$('#pc-sparkresume').css("opacity",1);
+	// 	},0);
+	// }
 
 	// scrollfire section colors
 	if(isScrolledIntoView(document.getElementById('about'))){
@@ -222,7 +227,8 @@ $(window).scroll(function(element){
 			$('#pc-decompressay').css("opacity",0);
 			$('#pc-phonology').css("opacity",0);
 			$('#pc-spoilerblock').css("opacity",0);
-			$('#pc-sparkresume').css("opacity",0);
+			$('#pc-mosquebuddy').css("opacity",0);
+			// $('#pc-sparkresume').css("opacity",0);
 		},0);
 	}
 
