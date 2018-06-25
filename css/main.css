@@ -65,7 +65,36 @@ a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
-
+a.button{
+  /* text-transform: uppercase; */
+  background: #fff;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  margin: 30px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	font-weight: 200;
+	text-decoration: none;
+  text-align: center;
+	font-size: 0.8rem;
+  transition: 300ms all;
+  box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  /* -webkit-box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15); */
+}
+a.button:hover{
+  transform: translateY(2px);
+  transition: 300ms all;
+  box-shadow: 0 0 30px 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 30px 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+  /* -webkit-box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+  box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2); */
+}
 /* animations */
 .animate-opacity-fade-03 {
   -webkit-animation: opacity-fade-03 1s ease-in-out 1 normal;
@@ -478,7 +507,9 @@ a.project-card{
 	border-radius: 5px;
 	background-color: #fff;
 	margin: 30px;
-	box-shadow: 0 0 30px 0 rgba(229,232,235,0.3), 0 0 0 transparent;
+  box-shadow: 0 0 30px 0 rgba(229,232,235,0.3), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(229,232,235,0.3), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 30px 0 rgba(229,232,235,0.3), 0 0 0 transparent;
   /* udacity style */
   /* -webkit-box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
   box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2); */
@@ -488,7 +519,9 @@ a.project-card{
 }
 a.project-card:hover{
 	transform: translateY(-10px);
-	box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 30px 0 rgba(229,232,235,0.5), 0 0 0 transparent;
   /* udacity style */
   /* -webkit-box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
   box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2); */
@@ -610,11 +643,43 @@ a.project-card:hover .spoilerblock-img{
 	opacity: 0.9;
 }
 
+/* resume styles */
+.section-resume{
+  transition: 500ms all;
+  min-height: 400px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background-color: #EFF2F7;
+}
+.resume-wrapper{
+  position: absolute;
+  top: -300px;
+  right: -350px;
+  border: none;
+}
+iframe{
+  border: none;
+  width: 816px;
+  height: 1056px;
+  /* scale down + 2d transform */
+  -ms-transform: scale(0.6,0.6) rotate(-30deg); /* IE 9 */
+  -webkit-transform: scale(0.6,0.6) rotate(-30deg); /* Safari */
+  transform: scale(0.6,0.6) rotate(-30deg);
+  box-shadow: 0 0 500px 20px rgba(0,0,0,0.05), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 500px 20px rgba(0,0,0,0.05), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 500px 20px rgba(0,0,0,0.05), 0 0 0 transparent;
+}
+
 /* project styles */
 .section-footer{
   padding-bottom: 200px;
 	background-color: #F9FAFC;
   transition: 500ms all;
+}
+.section-footer .content{
+  padding-top: 0;
 }
 .section-footer .content-chunk h2{
   color: #fff;
@@ -682,5 +747,19 @@ a:hover i{
   }
   .section-leftnav2{
     display: none;
+  }
+  .resume-wrapper{
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .resume-wrapper{
+    top: -350px;
+    right: -250px;
+  }
+  iframe{
+    -ms-transform: scale(0.4,0.4) rotate(-30deg); /* IE 9 */
+    -webkit-transform: scale(0.4,0.4) rotate(-30deg); /* Safari */
+    transform: scale(0.4,0.4) rotate(-30deg);
   }
 }

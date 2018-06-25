@@ -215,6 +215,7 @@ $(window).scroll(function(element){
 	if(isScrolledIntoView(document.getElementById('portfolio'))){
 		setTimeout(function(){
 			$('.section-projects').css('background-color','#F9FAFC');
+			$('.section-resume').css('opacity',1);
 			$('.section-footer').css('background-color','#F9FAFC');
 			$('.leftnav2 li a').css('color','#000');
 		},0);
@@ -222,6 +223,7 @@ $(window).scroll(function(element){
 	if(isScrolledIntoView(document.getElementById('contact'))){
 		setTimeout(function(){
 			$('.section-projects').css('background-color','#009EEB');
+			$('.section-resume').css('opacity',0);
 			$('.section-footer').css('background-color','#009EEB');
 			$('.leftnav2 li a').css('color','#fff');
 			$('#pc-decompressay').css("opacity",0);
