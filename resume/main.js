@@ -1,26 +1,12 @@
+// initialize typewriter
 $(function () {
   var typewriter = new Typewriter($('#position'));
   // typewriter.typeText('Design Engineer');
+  // typewriter.setDelay(0, 100);
   animate(typewriter);
 });
 
-function calculateSpaces(){
-  var positions = ['Design Engineer','Front-end Engineer','Web Developer','Software Engineer'];
-  var sequenceText = ['','','',''];
-  for(i = 0; i<sequenceText.length; i++){
-    var text = '';
-    var numBackspaces = (i == 0)
-                      ? positions[sequenceText.length-1].length
-                      : positions[i-1].length;
-    for(j=0; j<numBackspaces; j++){
-      text += '\\b';
-    }
-    text += positions[i];
-    console.log(text);
-  }
-}
-// calculateSpaces();
-
+// animate roles
 function animate(typewriter) {
   sequence = [
     {
@@ -43,3 +29,21 @@ function animate(typewriter) {
   ];
   typewriter.playSequence(sequence);
 }
+
+// calculate backspaces
+function calculateSpaces(){
+  var positions = ['Design Engineer','Front-end Engineer','Web Developer','Software Engineer'];
+  var sequenceText = ['','','',''];
+  for(i = 0; i<sequenceText.length; i++){
+    var text = '';
+    var numBackspaces = (i == 0)
+                      ? positions[sequenceText.length-1].length
+                      : positions[i-1].length;
+    for(j=0; j<numBackspaces; j++){
+      text += '\\b';
+    }
+    text += positions[i];
+    console.log(text);
+  }
+}
+// calculateSpaces();
