@@ -475,7 +475,7 @@ path.signiture {
 /* project styles */
 .section-projects{
   background-color: #F9FAFC;
-  transition: 500ms all;
+  transition: 300ms all;
   padding-bottom: 200px;
 }
 .content{
@@ -645,7 +645,7 @@ a.project-card:hover .spoilerblock-img{
 
 /* resume styles */
 .section-resume{
-  transition: 500ms all;
+  transition: 300ms all;
   min-height: 400px;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -676,7 +676,7 @@ iframe{
 .section-footer{
   padding-bottom: 200px;
 	background-color: #F9FAFC;
-  transition: 500ms all;
+  transition: 300ms all;
 }
 .section-footer .content{
   padding-top: 0;
