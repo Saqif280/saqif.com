@@ -200,6 +200,11 @@ $(window).scroll(function(element){
 			$('#pc-mosquebuddy').css("opacity",1);
 		},0);
 	}
+	if(isScrolledIntoView(document.getElementsByTagName('iframe')[0])){
+		setTimeout(function(){
+			$('iframe').addClass("slide");
+		},0);
+	}
 	// if(isScrolledIntoView(document.getElementById('pc-sparkresume'))){
 	// 	setTimeout(function(){
 	// 		$('#pc-sparkresume').css("opacity",1);
