@@ -3,6 +3,10 @@ html,body{
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Montserrat Alternates', sans-serif; */
 }
+.new{
+  color: #009EEB;
+  font-weight: 700;
+}
 #one-c h1{
   font-size: 2rem;
   font-weight: 900;
