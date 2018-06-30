@@ -1,34 +1,12 @@
+.new{
+  color: #009EEB;
+  font-weight: 700;
+  font-size: 1rem;
+}
 html,body{
   background-color: #333;
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Montserrat Alternates', sans-serif; */
-}
-.new{
-  color: #009EEB;
-  font-weight: 700;
-}
-#one-c h1{
-  font-size: 2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-#one-c h2{
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0;
-}
-#one-c h3{
-  font-size: 0.9rem;
-}
-#one-c p{
-  /* text-indent: 30px; */
-}
-#one-c p,a,span{
-  font-size: 0.8rem;
-  text-align: justify;
-}
-#one-c #resume{
-  padding: 10px 40px;
 }
 #resume{
   font-family: 'Lato', sans-serif;
@@ -37,7 +15,6 @@ html,body{
   margin: 0;
   padding: 10px 20px;
   border: 1px solid #eee;
-  border: none;
   /* position: absolute;
   top: 0;
   left: 0; */
@@ -102,23 +79,8 @@ hr{
   border: medium none;
   border-top: #eee 1px solid;
 }
-#one-c hr{
-  margin-bottom: -15px;
-}
 .text-bold{
   font-weight: bold !important;
-}
-#one-c .dateloc{
-  /* float: right; */
-  margin-top: auto;
-  color: #777;
-  font-style: italic;
-}
-#one-c .dateloc::before{
-  content: '[ '
-}
-#one-c .dateloc::after{
-  content: ' ] \00a0\00a0'
 }
 .row:not(.outer){
   padding: 20px;
@@ -151,15 +113,6 @@ hr{
   text-align: center;
   margin-bottom: -20px;
   z-index: 2;
-}
-#one-c .contact{
-  margin-top: 18px;
-  margin-bottom: 0px !important;
-  text-align: right;
-  /* float: right; */
-}
-#one-c .contact a{
-  color: #777;
 }
 .contact > *::after {
   content: '\2022';
