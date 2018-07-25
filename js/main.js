@@ -1,7 +1,7 @@
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-63008523-1', 'auto');
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	});
 
 
-  // preloader
+	// preloader
 	// https://ihatetomatoes.net/a-simple-one-page-template-with-a-preloading-screen/
 
 	// number of loaded images for preloader progress
@@ -35,62 +35,62 @@ $(document).ready(function() {
 	var loadingProgress = 0; // timeline progress - starts at 0
 
 	$('.portrait').imagesLoaded({
-	    background: true
+		background: true
 	}).progress( function( instance, image ) {
-	    loadProgress();
+		loadProgress();
 	});
 
 	function loadProgress(imgLoad, image)
 	{
-	    //one more image has been loaded
-	    loadedCount++;
+		//one more image has been loaded
+		loadedCount++;
 
-	    loadingProgress = (loadedCount/imagesToLoad);
+		loadingProgress = (loadedCount/imagesToLoad);
 
-	    // GSAP tween of our progress bar timeline
-	    TweenLite.to(progressTl, 0.7, {progress:loadingProgress, ease:Linear.easeNone});
+		// GSAP tween of our progress bar timeline
+		TweenLite.to(progressTl, 0.7, {progress:loadingProgress, ease:Linear.easeNone});
 
 	}
 
 	//progress timeline
 	var progressTl = new TimelineMax({
-	    paused: true,
-	    onUpdate: progressUpdate,
-	    onComplete: loadComplete
+		paused: true,
+		onUpdate: progressUpdate,
+		onComplete: loadComplete
 	});
 
 	progressTl
-	    //tween the progress bar width
-	    .to($('.preloader-progress span'), 1, {width:100, ease:Linear.easeNone});
+	//tween the progress bar width
+	.to($('.preloader-progress span'), 1, {width:100, ease:Linear.easeNone});
 
 	//as the progress bar width updates and grows we put the percentage loaded in the screen
 	function progressUpdate()
 	{
-	    //the percentage loaded based on the tween's progress
-	    loadingProgress = Math.round(progressTl.progress() * 100);
+		//the percentage loaded based on the tween's progress
+		loadingProgress = Math.round(progressTl.progress() * 100);
 
-	    //we put the percentage in the screen
-	    $(".preloader-percentage").text(loadingProgress + '%');
+		//we put the percentage in the screen
+		$(".preloader-percentage").text(loadingProgress + '%');
 
 	}
 
 	function loadComplete() {
 
-    // preloader out
-    var preloaderOutTl = new TimelineMax();
+		// preloader out
+		var preloaderOutTl = new TimelineMax();
 
-    preloaderOutTl
-        .to($('.preloader-progress'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn})
-        .to($('.preloader-percentage'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn}, 0.1)
-        .set($('body'), {className: '-=is-loading'})
-        .set($('.section-hero'), {className: '+=is-loaded'})
-        .to($('#preloader'), 0.7, {yPercent: 100, ease:Power4.easeInOut})
-        .set($('#preloader'), {className: '+=is-hidden'})
-				.from($('.section-hero'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.2')
-				.from($('.title'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.8')
-				.from($('.bio'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
-				.from($('.topnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
-        .from($('.leftnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5');
+		preloaderOutTl
+		.to($('.preloader-progress'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn})
+		.to($('.preloader-percentage'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn}, 0.1)
+		.set($('body'), {className: '-=is-loading'})
+		.set($('.section-hero'), {className: '+=is-loaded'})
+		.to($('#preloader'), 0.7, {yPercent: 100, ease:Power4.easeInOut})
+		.set($('#preloader'), {className: '+=is-hidden'})
+		.from($('.section-hero'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.2')
+		.from($('.title'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.8')
+		.from($('.bio'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
+		.from($('.topnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5')
+		.from($('.leftnav'), 1, {autoAlpha: 0, ease:Power1.easeOut}, '-=0.5');
 
 		// read in csv
 		d3.csv("data/signiture.txt", parseLine, function (error, data) {
@@ -99,7 +99,7 @@ $(document).ready(function() {
 			}, 1500);
 		});
 
-    return preloaderOutTl;
+		return preloaderOutTl;
 	}
 
 
@@ -129,14 +129,14 @@ $(document).ready(function() {
 
 		// path function
 		var pathGenerator = d3.line()
-			.curve(d3.curveBasis)
-			.x(function (d) { return xScale(d.x); })
-			.y(function (d) { return yScale(d.y); });
+		.curve(d3.curveBasis)
+		.x(function (d) { return xScale(d.x); })
+		.y(function (d) { return yScale(d.y); });
 
 		// create path
 		svg.append("path")
-			.attr("class", "signiture")
-			.attr("d",pathGenerator(data));
+		.attr("class", "signiture")
+		.attr("d",pathGenerator(data));
 	}
 
 	// parse data
@@ -155,9 +155,9 @@ $(document).ready(function() {
 $(window).scroll(function(element){
 	// parallax hero
 	var scrollTop = $(window).scrollTop();
-  var projectOffset = $('.section-projects').offset().top;
-  var footerOffset = $('.section-footer').offset().top;
-  var distanceProj = (projectOffset - scrollTop);
+	var projectOffset = $('.section-projects').offset().top;
+	var footerOffset = $('.section-footer').offset().top;
+	var distanceProj = (projectOffset - scrollTop);
 	var wHeight = $(window).height();
 	var height = $(".section-hero").height();
 	var factor = height-(height-scrollTop)
@@ -242,13 +242,13 @@ $(window).scroll(function(element){
 })
 
 function isScrolledIntoView(el) {
-  var rect = el.getBoundingClientRect();
-  var elemTop = rect.top;
-  var elemBottom = rect.bottom;
+	var rect = el.getBoundingClientRect();
+	var elemTop = rect.top;
+	var elemBottom = rect.bottom;
 
-  // Only completely visible elements return true:
-  // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-  // Partially visible elements return true:
-  var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-  return isVisible;
+	// Only completely visible elements return true:
+	// var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+	// Partially visible elements return true:
+	var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+	return isVisible;
 }
