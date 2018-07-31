@@ -56,7 +56,7 @@ p{
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-size: 1rem;
 	color: #10131a;
-	opacity: 0.3;
+	opacity: 0.4;
 	letter-spacing: 0px;
 	font-weight: 300px;
 	line-height: 25px;
@@ -535,7 +535,7 @@ a.project-card:hover{
 
 } */
 a.project-card:hover .sparkresume-img{
-	background: #FFD55F url(../img/sparkresume_thumb.png) no-repeat center center;
+	background: #FF9E7C url(../img/sparkresume_thumb-min.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -584,7 +584,7 @@ a.project-card:hover .spoilerblock-img{
 	margin-bottom: -40px;
 }
 .sparkresume-img{
-	background: #EFF2F7 url(../img/sparkresume_thumb.png) no-repeat center center;
+	background: #EFF2F7 url(../img/sparkresume_thumb-min.png) no-repeat center center;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
