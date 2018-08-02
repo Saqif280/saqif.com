@@ -94,6 +94,12 @@ hr{
 .t-r{
   text-align: right;
 }
+.f-r{
+  float: right;
+}
+.italicized{
+  font-style: italic;
+}
 .mb-xs{
   margin-bottom: 5px;
 }
