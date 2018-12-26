@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | FirstGame</title>
+    <title>Cyber Slider</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/cyber-slider.json", {onProgress: UnityProgress});
+      var password = prompt("Enter password or disable security", "");
+      if (password.toLowerCase() == "willsucks100cocks") {
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/cyber-slider.json", {onProgress: UnityProgress});
+      } else {
+        window.location.replace("http://saqif.com");
+      }
     </script>
   </head>
   <body>
