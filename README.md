@@ -25,6 +25,7 @@ Personal website for Saqif Badruddin - a modern Next.js site with a preserved 20
 
 -   Node.js 18.18.0 or higher
 -   npm, yarn, pnpm, or bun
+-   nvm (recommended for Node version management)
 
 ### Development
 
@@ -35,19 +36,25 @@ Personal website for Saqif Badruddin - a modern Next.js site with a preserved 20
     cd saqif.com
     ```
 
-2. **Install dependencies**
+2. **Use the correct Node version** (if using nvm)
+
+    ```bash
+    nvm use
+    ```
+
+3. **Install dependencies**
 
     ```bash
     npm install
     ```
 
-3. **Start the development server**
+4. **Start the development server**
 
     ```bash
     npm run dev
     ```
 
-4. **Open your browser**
+5. **Open your browser**
     - Main site: [http://localhost:3000](http://localhost:3000)
     - 2017 archive: [http://localhost:3000/2017/](http://localhost:3000/2017/)
 
