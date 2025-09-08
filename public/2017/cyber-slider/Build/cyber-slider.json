@@ -1,0 +1,13 @@
+{
+"companyName": "saqif.com",
+"productName": "Cyber Slider",
+"dataUrl": "cyber-slider.data.unityweb",
+"wasmCodeUrl": "cyber-slider.wasm.code.unityweb",
+"wasmFrameworkUrl": "cyber-slider.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#1D0E37",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Saqif Badruddin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="utf-8">
+<meta name="description" content="Saqif Badruddin is a programmer and web developer at Cornell University. Here you can find information about him, as well as links to some of his work.">
+<meta name="keywords" content="Saqif, Badruddin, Web Developer, Programmer, Teacher, Cornell University">
+<meta name="author" content="Saqif Badruddin">
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
+<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- normalize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<!-- font awesome -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- bs3 grid -->
+<link href="css/grid12.css" rel="stylesheet" type="text/css">
+<!-- d3 -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<!-- my resources -->
+<link href="css/main.css?v1" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/main.js?v1"></script>
+</head>
+<body class="is-loading">
+
+	<!-- preloader -->
+	<div id="preloader">
+    <div class="preloader-text">
+				<h3 class="loading">Loading</h3>
+				<br>
+        <p class="preloader-percentage">0%</p>
+        <br>
+        <div class="preloader-progress">
+        	<span></span>
+        </div>
+    </div>
+	</div>
+
+	<!-- <div class="icon">
+	</div> -->
+
+	<div class="section-topnav">
+		<div class="container-fluid">
+			<div class="col-md-offset-1 col-md-11">
+				<ul class="topnav">
+					<li><a href="#about" class="active">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-leftnav2">
+		<ul class="leftnav2">
+			<li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="section-leftnav center-flex">
+		<ul class="leftnav">
+			<li><a href="mailto:saqif280@gmail.com"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="SaqifBadruddinResume.pdf" target="_blank"><i class="fa fa-file-text"></i></a></li>
+			<li><a href="https://github.com/Saqif280" target="_blank"><i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/saqif/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<!-- <li><a href="https://www.facebook.com/profile.php?id=100000609492596" target="_blank"><i class="fa fa-facebook"></i></a></li> -->
+		</ul>
+	</div>
+
+	<!-- section hero -->
+	<div class="section-hero" id="about">
+		<div class="portrait center-flex">
+			<div class="content-wrapper container-fluid sidenav-adj">
+				<div class="col-sm-offset-1 col-sm-5 intro">
+					<h1 class="first-name">Saqif</h1>
+					<h1 class="last-name">Badruddin</h1>
+					<h3 class="title">Developer // <span class="accent-text">Designer</span></h3>
+					<p class="bio"><span>Hi, I'm Saqif. I design and create web applications. You can email me at </span><a href="mailto:saqif280@gmail.com">saqif280@gmail.com</a><span> or find more information on my </span><a href="SaqifBadruddinResume.pdf" target="_blank">resume.</a></p>
+				</div>
+				<div class="col-sm-2">
+				</div>
+				<div class="col-md-4 hidden-sm hidden-xs">
+		    	<div class="signiture" id="signiture"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- projects -->
+	<div class="section-projects" id="portfolio">
+		<div class="content">
+			<div class="content-chunk">
+				<h2>Imagination turned application. Here is some of my work.</h2>
+			</div>
+			<br>
+			<br>
+			<div class="container-fluid">
+
+				<div class="col-sm-6 padding-0" id="pc-sparkresume">
+					<a class="project-card" href="https://sparkresume.com" target="_blank">
+						<div class="project-card_thumb sparkresume-img">
+						</div>
+						<div class="project-card_content">
+							<h4>Co-Founder</h4>
+							<h2>SparkResume.com</h2>
+							<p>Make a resume in minutes. No hastle of restyling or struggling with fit.
+							Simple resume builder with view analytics.</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-sm-6 padding-0" id="pc-mosquebuddy">
+					<a class="project-card" href="https://mosquebuddy.com" target="_blank">
+						<div class="project-card_thumb mosquebuddy-img">
+						</div>
+						<div class="project-card_content">
+							<h4>Founder</h4>
+							<h2>MosqueBuddy.com</h2>
+							<p>Mosques made simple. Easily manage your local mosque or find information on mosques in your area.</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-sm-6 padding-0" id="pc-decompressay">
+					<a class="project-card" href="http://decompressay.com" target="_blank">
+						<div class="project-card_thumb decompressay-img">
+						</div>
+						<div class="project-card_content">
+							<h4>Developer</h4>
+							<h2>DecomprEssay.com</h2>
+							<p>Don't add fluff to your essay. Decompress it.
+							Artificially inflate any body of text to all word counters.</p>
+						</div>
+					</a>
+				</div>
+
+				<!-- <div class="col-sm-6 padding-0" id="pc-phonology">
+					<a class="project-card" href="http://phonology.io" target="_blank">
+						<div class="project-card_thumb phonology-img">
+						</div>
+						<div class="project-card_content">
+							<h4>Developer</h4>
+							<h2>Phonology.io</h2>
+							<p>Easily memorize any phone number.
+							For the few essential contacts you need, use uniquely generated phrases.</p>
+						</div>
+					</a>
+				</div> -->
+
+				<div class="col-sm-6 padding-0" id="pc-spoilerblock">
+					<a class="project-card" href="https://chrome.google.com/webstore/detail/crunchyroll-spoilerblock/dbbnpojimocppbphbifbgoamnbogoajn" target="_blank">
+						<div class="project-card_thumb spoilerblock-img">
+						</div>
+						<div class="project-card_content">
+							<h4>Developer</h4>
+							<h2>Browser Spoilerblock</h2>
+							<p>Hide thumbnails and titles of content.
+								Find your episodes with your eyes open. Now for Google Chrome on Crunchyroll.com.</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="section-resume">
+			<div class="content">
+				<div class="container-fluid">
+					<div class="col-sm-6">
+						<div class="content-chunk">
+							<h2>Education. Contributions. Abilities. More information on my resume.</h2>
+							<a class="button" href="SaqifBadruddinResume.pdf" target="_blank">View Resume</a>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="resume-wrapper">
+							<iframe src="/2017/resume/resume.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<div class="section-footer" id="contact">
+		<div class="content">
+			<div class="content-chunk">
+				<h2>Let's get in touch&nbsp;&nbsp;</h2>
+				<br>
+				<div class="social-links">
+					<a href="mailto:saqif280@gmail.com">
+						<i class="fa fa-envelope"></i></a>
+					<a href="SaqifBadruddinResume.pdf" target="_blank">
+						<i class="fa fa-file-text"></i></a>
+					<a href="https://github.com/Saqif280" target="_blank">
+						<i class="fa fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/saqif/" target="_blank">
+						<i class="fa fa-linkedin"></i></a>
+					<a href="https://www.facebook.com/profile.php?id=100000609492596" target="_blank">
+						<i class="fa fa-facebook"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- 	<div class="bg-poly1">
+	</div>
+
+	<div class="bg-poly2">
+	</div>
+
+	<div class="bg-poly3">
+	</div> -->
+
+	<!-- preloader scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+
+</body>
+</html>
