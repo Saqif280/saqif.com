@@ -20,7 +20,7 @@ export default function Home() {
         <p className="text-base text-[#666] leading-relaxed">
           ...I haven&apos;t updated my{' '}
           <a
-            href="/2017/"
+            href="https://saqif280.github.io/saqif.com-2017/"
             className="text-[#1a1a1a] underline decoration-[#ccc] underline-offset-[3px] hover:text-black hover:decoration-black transition-all duration-500"
             target="_blank"
             rel="noopener noreferrer"
