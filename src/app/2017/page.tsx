@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 export default function Page2017() {
   useEffect(() => {
     // Redirect to the static HTML file
-    window.location.href = '/2017/index.html';
+    window.location.replace('/2017/index.html');
   }, []);
 
   return (
@@ -16,7 +16,7 @@ export default function Page2017() {
       height: '100vh',
       fontFamily: 'Arial, sans-serif'
     }}>
-      <p>Redirecting to 2017 website...</p>
+      <p>Loading 2017 website...</p>
     </div>
   );
 }
